@@ -14,7 +14,7 @@ public class T0_iframe_practice extends TestBase {
 
      */
 
-    @Test
+    @Test (priority = 1)
     public void left(){
         driver.get("https://loopcamp.vercel.app/nested-frames.html");
         driver.switchTo().frame("frame-top");
@@ -24,7 +24,7 @@ public class T0_iframe_practice extends TestBase {
         Assert.assertEquals(actualLeft.trim(), "LEFT");
     }
 
-    @Test
+    @Test (priority = 2)
     public void right(){
         driver.get("https://loopcamp.vercel.app/nested-frames.html");
         driver.switchTo().frame("frame-top");
@@ -34,7 +34,7 @@ public class T0_iframe_practice extends TestBase {
         Assert.assertEquals(actualRight.trim(), "RIGHT");
     }
 
-    @Test
+    @Test (priority = 3)
     public void middle(){
         driver.get("https://loopcamp.vercel.app/nested-frames.html");
         driver.switchTo().frame("frame-top");
@@ -44,7 +44,7 @@ public class T0_iframe_practice extends TestBase {
         Assert.assertEquals(actualMiddle.trim(), "MIDDLE");
     }
 
-    @Test
+    @Test (priority = 4)
     public void bottom(){
         driver.get("https://loopcamp.vercel.app/nested-frames.html");
         driver.switchTo().frame("frame-bottom");
