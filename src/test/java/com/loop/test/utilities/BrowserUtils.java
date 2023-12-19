@@ -33,5 +33,22 @@ public class BrowserUtils {
 
     }
 
+    /**
+     * switches to the new window by the exact title
+     * return to original window if the window with given title not found
+     * @param driver
+     * @param targetTitle
+     */
+    public static void switchToWindow(WebDriver driver, String targetTitle){
+        String origin = driver.getWindowHandle();
+        for (String handle : driver.getWindowHandles()){
+            driver.switchTo().window(handle);
+            if(driver.getTitle().contains(targetTitle)){
+                return;                        // if the if condition is good return will be good , if the if condition not work it wil go out to line 50
+            }                                  // we can use else too and it will work
+        }
+        driver.switchTo().window(origin);
+    }
+
 
 }

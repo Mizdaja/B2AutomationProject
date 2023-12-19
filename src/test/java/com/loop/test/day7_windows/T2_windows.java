@@ -2,7 +2,10 @@ package com.loop.test.day7_windows;
 
 import com.loop.test.base.TestBase;
 import com.loop.test.utilities.BrowserUtils;
+import com.loop.test.utilities.DocuportUtils;
+//import com.loop.test.utilities.DocuportWebTablesUtils;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
 import java.util.Set;
@@ -42,9 +45,10 @@ public class T2_windows extends TestBase {
 //        }
 
 
-        BrowserUtils.switchWindowAndValidate(driver, "amazon.com", "amazon");
+        //BrowserUtils.switchWindowAndValidate(driver, "amazon.com", "amazon");
+        BrowserUtils.switchToWindow(driver, "Facebook");
+
 
     }
-
 
 }
